@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
+import {DashboardModule} from "./dashboard/dashboard.module";
+import {routes} from "./app.routes";
+import {DataVisualService} from "./services/data-visual.service";
+import {HttpClientModule} from "@angular/common/http";
+
 
 
 @NgModule({
@@ -10,9 +14,14 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    DashboardModule,
+    HttpClientModule,
+    routes
   ],
-  providers: [],
+  providers: [
+    DataVisualService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

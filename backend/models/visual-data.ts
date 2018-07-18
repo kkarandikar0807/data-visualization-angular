@@ -1,10 +1,9 @@
 export class VisualData {
-    
-    constructor(public studentName: String, public mathMarks: number, public physcisMarks: number, public chemistryMarks: number) {
 
-        this.studentName = studentName;
-        this.mathMarks = mathMarks;
-        this.physcisMarks = physcisMarks;
-        this.chemistryMarks = chemistryMarks;
+    constructor(public id: number, public label: string, public value: number, public color: string) {
+        this.id = id;
+        this.label = label;
+        this.value = value;
+        this.color = color;
     }
 }

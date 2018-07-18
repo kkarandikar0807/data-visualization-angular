@@ -10,10 +10,10 @@ app.use(cors());
 
 let studentMarks: VisualData[] = [];
 
-    studentMarks.push(new VisualData('Amy', 90, 85, 86));
-    studentMarks.push(new VisualData('Bob', 87, 91, 78));
-    studentMarks.push(new VisualData('Amy', 92, 75, 99));
-    studentMarks.push(new VisualData('Amy', 88, 99, 72));
+    studentMarks.push(new VisualData(0, 'Test Label 1', 90, 'red'));
+    studentMarks.push(new VisualData(1, 'Test Labe 2', 87, 'yellow'));
+    studentMarks.push(new VisualData(2, 'Test Label 3', 78, 'blue'));
+    studentMarks.push(new VisualData(3, 'Test Label 4', 125, 'purple'));
 
 app.get('/visualdata', (req: any, res: any) => {
         res.json(studentMarks);
